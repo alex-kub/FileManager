@@ -1,0 +1,16 @@
+.list td, .list th {
+    font-size: 18pt;
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+input[type=button] {
+    font-size: 18pt;
+    padding: 10px;
+}
+
+input[type=checkbox] {
+
+
+}

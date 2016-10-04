@@ -1,0 +1,43 @@
+#upload-area {
+    float: left;
+    margin-left: 2px;
+    margin-right: -20px;
+    width: 99%;
+
+    height: 200px;
+    border: 2px blue dotted;
+    /*display: none;*/
+}
+#upload-scales {
+    position: fixed;
+
+    left: 55%;
+    /*right: 50%;*/
+    bottom: 65px;
+
+    /*width: 400px;*/
+    min-height: 50px;
+
+    /*border: 1px solid red;*/
+    /*background: silver;*/
+}
+
+.upload-item {
+    /*width: 100%;*/
+    /*border-radius: 3px;*/
+    border: 1px solid blue;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 400px;
+    background: #0d4a7a;
+}
+
+.upload-item-info {
+    margin: 5px;
+    white-space: pre-wrap;
+    color: #ffa009;
+    font-family: "Georgia", Times, serif;
+}
+
+
+
