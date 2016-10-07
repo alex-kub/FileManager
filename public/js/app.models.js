@@ -3,7 +3,7 @@ var app = app || {};
 app.models = {};
 
 var Local = new (Backbone.Collection.extend({
-   localStorage: new Backbone.LocalStorage('TestLocal')
+   localStorage: new Backbone.LocalStorage('FileLocal')
 }));
 
 var File = Backbone.Model.extend({
@@ -19,24 +19,42 @@ var File = Backbone.Model.extend({
    // генерирования методов CRUD
    isNew: function() { return false },
    sync: function(method, model, options) {
-     model.trigger('sync');
+      model.trigger('sync');
       switch (method){
          case 'patch':
-            break;
-         case 'update':
+            // Сохранение CHECKED на стороне клиента
+            if ('checked' in options.attrs) {
                if (model.changed.checked == true) {
-                  model.local.create(
-                     {name: model.attributes.name}
-                  );
-               } else {
+                  model.local.create({name: model.attributes.name});
+                  console.log('add check');
+                  return;
+               } else
+               if (model.changed.checked == false) {
                   _.each(
                      model.local.where({
-                        name:model.attributes.name
+                        name: model.attributes.name
                      }),
-                     function(elem){
+                     function (elem) {
                         elem.destroy();
                      });
+               }
             }
+            break;
+         //
+         //case 'update':
+         //   if (model.changed.checked == true) {
+         //      model.local.create( {name: model.attributes.name} );
+         //      }
+         //   else {
+         //      _.each(
+         //         model.local.where({
+         //            name:model.attributes.name
+         //         }),
+         //         function(elem){
+         //            elem.destroy();
+         //         });
+         //   }
+         //
             break;
          case 'delete':
             //console.log('delete');

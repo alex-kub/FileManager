@@ -21,3 +21,5 @@
 {!! Html::style('css/list.css') !!}
 {!! Html::style('css/upload.css') !!}
 {!! Html::style('css/lib/jquery-ui.css') !!}
+{!! Html::style('css/lib/bootstrap.css') !!}
+

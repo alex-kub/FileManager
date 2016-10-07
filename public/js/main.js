@@ -49,13 +49,13 @@ $('#remove').on('click', function() {
 
 $('#all_check').on('click', function() {
   list_files.each( function(elem) {
-    elem.save({checked: true});
+    elem.save({checked: true}, {patch: true});
   });
 });
 
 $('#not_all_check').on('click', function() {
   list_files.each( function(elem) {
-    elem.save({checked: false});
+    elem.save({checked: false}, {patch: true});
   });
 });
 

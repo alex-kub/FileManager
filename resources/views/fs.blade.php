@@ -23,7 +23,7 @@
 
 <script id="files_tpl" type="text/template">
     <input class="select_file" type="checkbox" <%= (checked)? 'checked':'' %>>
-    <%= name%>
+    <span class="nameFileDir" contenteditable="true"><%= name%></span>
 </script>
 
 <script id="scale_tpl" type="text/template">

@@ -21,7 +21,8 @@ app.views.File = Backbone.View.extend({
     return this;
   },
    select_file: function() {
-      this.model.save('checked', !this.model.get('checked'));
+      //this.model.save('checked', !this.model.get('checked'));
+      this.model.save( {'checked' : !this.model.get('checked') }, {patch: true});
    }
 });
 
