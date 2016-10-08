@@ -2,10 +2,11 @@
 @section('content')
 
 <input id="all_check" type="button" value="all check">
+
 <input id="not_all_check" type="button" value="not all check">
 <input id="remove" type="button" value="remove">
 <input id="check" type="button" value="check">
-<input id="field" type="text" size="5">
+
 
 <div id="files" style="margin: 30px; font-size: 14pt">
     <ul id="data" style="padding: 10px; padding-left: 30px">
